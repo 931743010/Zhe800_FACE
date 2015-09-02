@@ -18,7 +18,7 @@ extension UIColor {
     
     //第二主题色
     class func applicationSecondColor() -> UIColor {
-        return UIColor(red: 255/255.0, green: 0/255.0, blue: 0/255.0, alpha:1)    }
+        return UIColor(red: 198/255.0, green: 60/255.0, blue: 85/255.0, alpha:1)    }
     
     //警告颜色
     class func applicationWarningColor() -> UIColor {

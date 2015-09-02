@@ -32,9 +32,9 @@ class MainTabBarController: UITabBarController {
     
     func addControllers() {
         
-        addchildController("Home", "首页", "tabbar_home", "tabbar_home_highlighted")
-        addchildController("Message", "消息", "tabbar_message", "tabbar_message_highlighted")
-        addchildController("Me", "我", "tabbar_me", "tabbar_me_highlighted")
+        addchildController("Home", "首页", "home_tab_home_btn", "home_tab_home_selected_btn")
+        addchildController("Message", "积分商城", "home_tab_point_btn", "home_tab_point_selected_btn")
+        addchildController("Me", "个人中心", "home_tab_personal_btn", "home_tab_personal_selected_btn")
         
     }
     
@@ -51,7 +51,7 @@ class MainTabBarController: UITabBarController {
         
         vc.navigationItem.title = title
         
-        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 0/255.0, green: 130/255.0, blue: 255/255.0, alpha: 1)], forState: UIControlState.Selected)
+        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 198/255.0, green: 60/255.0, blue: 85/255.0, alpha:1)], forState: UIControlState.Selected)
         
         self.addChildViewController(vc)
     }
