@@ -20,13 +20,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         self.addRecyclePictureView()
-        
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "autoNextImage", userInfo: nil, repeats: true)
     }
-
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     /// TODO: 1、图片轮播器
@@ -39,7 +36,7 @@ class HomeViewController: UIViewController {
         
         for var i = 0; i < imgCount; i++ {
             var imgView = UIImageView() as UIImageView
-            var imgName = NSString(format: "img_%d", i)
+            var imgName = NSString(format: "img_0%d", i+1)
             imgView.image = UIImage(named: imgName as String)
             
             // setting frame
@@ -53,6 +50,15 @@ class HomeViewController: UIViewController {
         self.scrollView.contentSize = CGSizeMake(CGFloat(imgCount) * imgW, 0)
         self.scrollView.pagingEnabled = true
         self.scrollView.showsHorizontalScrollIndicator = false
+        
+        
+        // auto play the pictures.
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "autoNextImage", userInfo: nil, repeats: true)
+        
+        /// FIXME: BUG->解决拖动其他控件的时候, 图片轮播期不动了
+        // [todo -> 将self.timer加到当前线程的消息循环中 ]
+        var runLoop = NSRunLoop.currentRunLoop()
+        runLoop.addTimer(self.timer!, forMode: NSRunLoopCommonModes)
     }
     
     /// 1.1 自动滚到下一页
@@ -90,6 +96,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    
 }
 
 // MARK: UIScrollView Delegate
@@ -103,5 +111,14 @@ extension HomeViewController: UIScrollViewDelegate {
         var page = (point.x + (scrollW * 0.5)) / scrollW// [当滚动多半个界面时，pageControl定位到下一页。]
 //        self.pageControl.currentPage = Int(page) != imgCount ? Int(page) : 0
         self.pageControl.currentPage = Int(page)
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        self.timer?.invalidate()
+        self.timer = nil
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "autoNextImage", userInfo: nil, repeats: true)
     }
 }
