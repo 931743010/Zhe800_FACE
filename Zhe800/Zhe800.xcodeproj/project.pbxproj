@@ -22,6 +22,7 @@
 		149233FF1B968642000ABA2A /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149233F11B968642000ABA2A /* Me.storyboard */; };
 		149234001B968642000ABA2A /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149233F31B968642000ABA2A /* Message.storyboard */; };
 		149234011B968642000ABA2A /* ExtensionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149233F61B968642000ABA2A /* ExtensionFile.swift */; };
+		149234041B96B3AF000ABA2A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149234031B96B3AF000ABA2A /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		149233F11B968642000ABA2A /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
 		149233F31B968642000ABA2A /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		149233F61B968642000ABA2A /* ExtensionFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFile.swift; sourceTree = "<group>"; };
+		149234031B96B3AF000ABA2A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				149233E21B968642000ABA2A /* Home.storyboard */,
+				149234031B96B3AF000ABA2A /* HomeViewController.swift */,
 			);
 			name = "Home（首页）";
 			path = Home;
@@ -334,6 +337,7 @@
 				149233FD1B968642000ABA2A /* MainTabBar.swift in Sources */,
 				149233FC1B968642000ABA2A /* MainNavViewController.swift in Sources */,
 				149234011B968642000ABA2A /* ExtensionFile.swift in Sources */,
+				149234041B96B3AF000ABA2A /* HomeViewController.swift in Sources */,
 				149233FE1B968642000ABA2A /* MainTabBarController.swift in Sources */,
 				149233FA1B968642000ABA2A /* SVProgressHUD.m in Sources */,
 				149233C11B9685B1000ABA2A /* AppDelegate.swift in Sources */,
