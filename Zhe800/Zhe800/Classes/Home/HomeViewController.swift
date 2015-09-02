@@ -13,12 +13,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var timer : NSTimer?
     let imgCount = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.addRecyclePictureView()
+        
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "autoNextImage", userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +53,20 @@ class HomeViewController: UIViewController {
         self.scrollView.contentSize = CGSizeMake(CGFloat(imgCount) * imgW, 0)
         self.scrollView.pagingEnabled = true
         self.scrollView.showsHorizontalScrollIndicator = false
+    }
+    
+    /// 1.1 自动滚到下一页
+    func autoNextImage() {
+        
+        var page = self.pageControl.currentPage as Int
+        if(page == self.pageControl.numberOfPages - 1){
+            page = 0;
+        } else {
+            page++;
+        }
+
+        let offsetX = CGFloat(page) * self.scrollView.frame.size.width
+        self.scrollView.setContentOffset(CGPointMake(offsetX, 0), animated: true)
     }
 }
 
@@ -84,7 +101,7 @@ extension HomeViewController: UIScrollViewDelegate {
         
         // Calculating the current page. 
         var page = (point.x + (scrollW * 0.5)) / scrollW// [当滚动多半个界面时，pageControl定位到下一页。]
-        self.pageControl.currentPage = Int(page) != imgCount ? Int(page) : 0
-        
+//        self.pageControl.currentPage = Int(page) != imgCount ? Int(page) : 0
+        self.pageControl.currentPage = Int(page)
     }
 }
