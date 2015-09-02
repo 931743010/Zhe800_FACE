@@ -133,21 +133,22 @@
 		149233E01B968642000ABA2A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				149233E11B968642000ABA2A /* Home */,
-				149233E31B968642000ABA2A /* Libs */,
-				149233EB1B968642000ABA2A /* Main */,
+				149233E11B968642000ABA2A /* Home（首页） */,
 				149233F01B968642000ABA2A /* Me */,
 				149233F21B968642000ABA2A /* Message */,
+				149233EB1B968642000ABA2A /* Main（导航） */,
+				149233E31B968642000ABA2A /* Libs */,
 				149233F41B968642000ABA2A /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		149233E11B968642000ABA2A /* Home */ = {
+		149233E11B968642000ABA2A /* Home（首页） */ = {
 			isa = PBXGroup;
 			children = (
 				149233E21B968642000ABA2A /* Home.storyboard */,
 			);
+			name = "Home（首页）";
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -172,7 +173,7 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
-		149233EB1B968642000ABA2A /* Main */ = {
+		149233EB1B968642000ABA2A /* Main（导航） */ = {
 			isa = PBXGroup;
 			children = (
 				149233EC1B968642000ABA2A /* Main.storyboard */,
@@ -180,6 +181,7 @@
 				149233EE1B968642000ABA2A /* MainTabBar.swift */,
 				149233EF1B968642000ABA2A /* MainTabBarController.swift */,
 			);
+			name = "Main（导航）";
 			path = Main;
 			sourceTree = "<group>";
 		};
@@ -523,6 +525,7 @@
 				149233DC1B9685B2000ABA2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		149233DD1B9685B2000ABA2A /* Build configuration list for PBXNativeTarget "Zhe800Tests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +534,7 @@
 				149233DF1B9685B2000ABA2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
