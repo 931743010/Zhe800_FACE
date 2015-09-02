@@ -52,7 +52,7 @@ class MainTabBarController: UITabBarController {
         vc.tabBarItem.title = title
         vc.navigationItem.title = title
         
-        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 198/255.0, green: 60/255.0, blue: 85/255.0, alpha:1)], forState: UIControlState.Selected)
+        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 220/255.0, green: 33/255.0, blue: 68/255.0, alpha:1)], forState: UIControlState.Selected)
 
         self.addChildViewController(vc)
     }
