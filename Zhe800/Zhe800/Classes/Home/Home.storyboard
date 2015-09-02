@@ -24,7 +24,6 @@
         <!--首页-->
         <scene sceneID="Gpq-xz-QzH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bp5-hG-JFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="jWC-Hx-gIN" customClass="HomeViewController" customModule="Zhe800" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HTr-PI-Wbb"/>
@@ -41,11 +40,31 @@
                                     <rect key="frame" x="0.0" y="64" width="375" height="391"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W0-dq-uSU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4W0-dq-uSU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="122" id="cHs-Gx-M8H"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="delegate" destination="jWC-Hx-gIN" id="iBd-cd-Wtb"/>
+                                            </connections>
                                         </scrollView>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="QnF-3N-VA3">
+                                            <rect key="frame" x="107.5" y="90" width="160" height="37"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="5jw-tm-xR5"/>
+                                            </constraints>
+                                            <color key="currentPageIndicatorTintColor" red="1" green="0.27380267781917933" blue="0.2477218063395743" alpha="1" colorSpace="calibratedRGB"/>
+                                        </pageControl>
                                     </subviews>
                                     <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="4W0-dq-uSU" firstAttribute="bottom" secondItem="QnF-3N-VA3" secondAttribute="bottom" constant="-5" id="6E5-jd-Dok"/>
+                                        <constraint firstItem="4W0-dq-uSU" firstAttribute="leading" secondItem="wdJ-Bd-hVy" secondAttribute="leading" id="LOr-1W-yT2"/>
+                                        <constraint firstAttribute="centerX" secondItem="QnF-3N-VA3" secondAttribute="centerX" id="QWV-mq-9YK"/>
+                                        <constraint firstAttribute="trailing" secondItem="4W0-dq-uSU" secondAttribute="trailing" id="jKX-b7-KGo"/>
+                                        <constraint firstItem="4W0-dq-uSU" firstAttribute="top" secondItem="wdJ-Bd-hVy" secondAttribute="top" id="zaJ-r9-OtP"/>
+                                    </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="idReport" selectionStyle="default" indentationWidth="10" reuseIdentifier="idHomeCell" rowHeight="64" id="Dyw-8x-h4Q">
@@ -72,7 +91,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="Z4K-8s-Aa9"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pageControl" destination="QnF-3N-VA3" id="XGa-8P-vSr"/>
+                        <outlet property="scrollView" destination="4W0-dq-uSU" id="XVM-1R-ja5"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bp5-hG-JFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1191.5" y="237.5"/>
         </scene>
