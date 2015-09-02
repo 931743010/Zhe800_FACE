@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Zhe800_FACE.xcodeproj">
+      location = "self:Zhe800.xcodeproj">
    </FileRef>
 </Workspace>
