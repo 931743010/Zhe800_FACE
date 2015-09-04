@@ -23,6 +23,8 @@
 		149234001B968642000ABA2A /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149233F31B968642000ABA2A /* Message.storyboard */; };
 		149234011B968642000ABA2A /* ExtensionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149233F61B968642000ABA2A /* ExtensionFile.swift */; };
 		149234041B96B3AF000ABA2A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149234031B96B3AF000ABA2A /* HomeViewController.swift */; };
+		14E971E21B99B336006D42E8 /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E971E11B99B336006D42E8 /* ProductView.xib */; };
+		14E971E41B99B781006D42E8 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E971E31B99B781006D42E8 /* ProductView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		149233F31B968642000ABA2A /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		149233F61B968642000ABA2A /* ExtensionFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFile.swift; sourceTree = "<group>"; };
 		149234031B96B3AF000ABA2A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		14E971E11B99B336006D42E8 /* ProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
+		14E971E31B99B781006D42E8 /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 			children = (
 				149233E21B968642000ABA2A /* Home.storyboard */,
 				149234031B96B3AF000ABA2A /* HomeViewController.swift */,
+				14E971E11B99B336006D42E8 /* ProductView.xib */,
+				14E971E31B99B781006D42E8 /* ProductView.swift */,
 			);
 			name = "Home（首页）";
 			path = Home;
@@ -314,6 +320,7 @@
 				149233CB1B9685B1000ABA2A /* LaunchScreen.xib in Resources */,
 				149233FB1B968642000ABA2A /* Main.storyboard in Resources */,
 				149233C81B9685B1000ABA2A /* Images.xcassets in Resources */,
+				14E971E21B99B336006D42E8 /* ProductView.xib in Resources */,
 				149233FF1B968642000ABA2A /* Me.storyboard in Resources */,
 				149234001B968642000ABA2A /* Message.storyboard in Resources */,
 				149233F71B968642000ABA2A /* Home.storyboard in Resources */,
@@ -335,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				149233FD1B968642000ABA2A /* MainTabBar.swift in Sources */,
+				14E971E41B99B781006D42E8 /* ProductView.swift in Sources */,
 				149233FC1B968642000ABA2A /* MainNavViewController.swift in Sources */,
 				149234011B968642000ABA2A /* ExtensionFile.swift in Sources */,
 				149234041B96B3AF000ABA2A /* HomeViewController.swift in Sources */,

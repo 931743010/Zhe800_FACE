@@ -17,6 +17,10 @@ class HomeViewController: UIViewController, UIAlertViewDelegate {
     var timer : NSTimer?
     let imgCount = 5
     
+    @IBOutlet weak var view1: UIView!
+    @IBOutlet weak var view2: UIView!
+    @IBOutlet weak var view3: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,10 +31,84 @@ class HomeViewController: UIViewController, UIAlertViewDelegate {
         // 2、滑动没有循环--手动滑时？滑动到最后一页时，应该自动加载第一页！！->todo
         
         self.addButtons()
+        
+        self.addProductsList()
     }
         
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    /// 3、自定义product产品列表
+    func addProductsList() {
+        // 计算坐标
+        
+        // 创建UIView显示到屏幕上
+        // 设置productView的frame
+        var productW:CGFloat = 100;
+        var productH:CGFloat = 120;
+        // 表示每行的列的个数
+        var columns:CGFloat = 3;
+        // 第一行的view距离顶部的距离
+        var marginTop:CGFloat = (self.view1.frame.size.height - productH) / 2;
+        // 每行的间距
+        // marginX = (屏幕宽度 - (列数 * appW)) / (列数 + 1)
+        var marginX:CGFloat = (self.view1.frame.size.width - (columns * productW)) / (columns + 1);
+        var marginY:CGFloat = marginX;
+        
+        // MARK: view1
+        for var i = 0; i < 3; i++ {
+            var product = ProductView.productViewWithNib() as! ProductView
+            
+            // 计算当前的格子所在的列的索引
+            var col = CGFloat(i % Int(columns));
+            // 计算每个格子所在的行的索引
+            var row = CGFloat(i / Int(columns));
+
+            var productX = marginX + col * (productW + marginX);
+            var productY = marginTop + row * productH
+            
+            product.frame = CGRectMake(productX, productY, productW, productH)
+
+            self.view1.addSubview(product)
+        }
+        
+        // MARK: view2
+        var product = ProductView.productViewWithNib() as! ProductView
+        product.imgView.image = UIImage(named: "tag_taofushi")
+        product.headerLbl.text = "今日更新"
+        product.subLbl.text = "今日9:00更新"
+        product.frame = CGRectMake(0, 0, self.view2.frame.size.width-2, self.view2.frame.size.height)
+        self.view2.addSubview(product)
+        
+        var line = UIView()
+        line.backgroundColor = UIColor(red: 223/255.0, green: 223/255.0, blue: 223/255.0, alpha: 1)
+        var lineX = self.view2.frame.size.width - 2
+        var lineH = self.view2.frame.size.height - 8
+        var lineY:CGFloat = 4
+        line.frame = CGRectMake(lineX, lineY, 1, lineH)
+        self.view2.addSubview(line)
+        // MARK: view3
+        var columnss:CGFloat = 2;
+        var productWw:CGFloat = self.view3.frame.size.width / 2;
+        var productHh:CGFloat = self.view3.frame.size.height / 2;
+
+        for var i = 0; i < 4; i++ {
+            var product = ProductView.productViewWithNib() as! ProductView
+            product.imgView.image = UIImage(named: "tag_taoqita")
+            product.headerLbl.text = "8块8包邮"
+            product.subLbl.text = "全场最低价"
+
+            var col = CGFloat(i % Int(columnss))
+            var row = CGFloat(i / Int(columnss))
+            
+            var productXx = col * productWw
+            var productYy = row * productHh
+            
+            product.frame = CGRectMake(productXx, productYy, productWw, productHh)
+            
+            self.view3.addSubview(product)
+        }
     }
     
     /// TODO: 2、“九宫格”方式动态加载btn，实现其功能（本应该：自定义xib+读取plist文件+建模型数据&封装方法进行赋值！）2 x 4 = 8个view，现在直接加了8个btn并实现其测试的点击事件
@@ -54,7 +132,6 @@ class HomeViewController: UIViewController, UIAlertViewDelegate {
             var btnY = row * btnH
             
             btn.frame = CGRectMake(btnX, btnY, btnW, btnH)
-//            btn.backgroundColor = UIColor.redColor()
             btn.tag = i
             btn.addTarget(self, action: "btnClick:", forControlEvents: UIControlEvents.TouchUpInside)
             self.btnViews.addSubview(btn)

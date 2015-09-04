@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="wdJ-Bd-hVy" userLabel="HeaderView">
-                                    <rect key="frame" x="0.0" y="64" width="375" height="700"/>
+                                    <rect key="frame" x="0.0" y="64" width="375" height="647"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4W0-dq-uSU">
@@ -80,20 +80,50 @@
                                                 </mask>
                                             </variation>
                                         </view>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkg-fh-YNo" userLabel="layout">
-                                            <rect key="frame" x="0.0" y="308" width="375" height="368"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkg-fh-YNo" userLabel="layout">
+                                            <rect key="frame" x="0.0" y="313" width="375" height="321"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-o7-dJq" userLabel="View1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="124"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-MV-NgC" userLabel="lineW">
+                                                            <rect key="frame" x="0.0" y="123" width="375" height="1"/>
+                                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ou4-jW-NbY" userLabel="lineH">
+                                                            <rect key="frame" x="128" y="4" width="1" height="116"/>
+                                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyo-ei-0Rx" userLabel="lineH">
+                                                            <rect key="frame" x="249" y="4" width="1" height="116"/>
+                                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9h-Ld-koY" userLabel="View2">
-                                                    <rect key="frame" x="0.0" y="148" width="152" height="220"/>
-                                                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <rect key="frame" x="0.0" y="124" width="144" height="197"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Up5-F8-3Ie" userLabel="lineH">
+                                                            <rect key="frame" x="141" y="4" width="1" height="189"/>
+                                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FPC-Bb-etz" userLabel="View3">
-                                                    <rect key="frame" x="152" y="148" width="223" height="220"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <rect key="frame" x="143" y="124" width="232" height="197"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R93-KS-5nE" userLabel="lineH">
+                                                            <rect key="frame" x="115" y="4" width="1" height="189"/>
+                                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRm-pr-Epv" userLabel="lineW">
+                                                            <rect key="frame" x="0.0" y="98" width="232" height="1"/>
+                                                            <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,13 +131,17 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="qkg-fh-YNo" secondAttribute="bottom" constant="13" id="3FQ-9c-1fM"/>
                                         <constraint firstItem="4W0-dq-uSU" firstAttribute="bottom" secondItem="QnF-3N-VA3" secondAttribute="bottom" constant="-5" id="6E5-jd-Dok"/>
+                                        <constraint firstItem="qkg-fh-YNo" firstAttribute="leading" secondItem="wdJ-Bd-hVy" secondAttribute="leading" id="BMB-FX-bsi"/>
+                                        <constraint firstItem="qkg-fh-YNo" firstAttribute="top" secondItem="hRU-oV-7oX" secondAttribute="bottom" constant="13" id="GQu-jW-FHC"/>
                                         <constraint firstAttribute="trailing" secondItem="hRU-oV-7oX" secondAttribute="trailing" id="IRR-22-jRP"/>
                                         <constraint firstItem="4W0-dq-uSU" firstAttribute="leading" secondItem="wdJ-Bd-hVy" secondAttribute="leading" id="LOr-1W-yT2"/>
                                         <constraint firstItem="hRU-oV-7oX" firstAttribute="top" secondItem="4W0-dq-uSU" secondAttribute="bottom" constant="-2" id="O6Y-GZ-R8I"/>
                                         <constraint firstAttribute="centerX" secondItem="QnF-3N-VA3" secondAttribute="centerX" id="QWV-mq-9YK"/>
                                         <constraint firstItem="hRU-oV-7oX" firstAttribute="leading" secondItem="wdJ-Bd-hVy" secondAttribute="leading" id="X3h-qp-Rj8"/>
                                         <constraint firstAttribute="trailing" secondItem="4W0-dq-uSU" secondAttribute="trailing" id="jKX-b7-KGo"/>
+                                        <constraint firstAttribute="trailing" secondItem="qkg-fh-YNo" secondAttribute="trailing" id="nWu-RQ-7gC"/>
                                         <constraint firstItem="4W0-dq-uSU" firstAttribute="top" secondItem="wdJ-Bd-hVy" secondAttribute="top" id="zaJ-r9-OtP"/>
                                     </constraints>
                                 </view>
@@ -244,11 +278,14 @@
                         <outlet property="btnViews" destination="hRU-oV-7oX" id="OTx-pr-Srm"/>
                         <outlet property="pageControl" destination="QnF-3N-VA3" id="XGa-8P-vSr"/>
                         <outlet property="scrollView" destination="4W0-dq-uSU" id="XVM-1R-ja5"/>
+                        <outlet property="view1" destination="rBw-o7-dJq" id="DeK-4t-hTT"/>
+                        <outlet property="view2" destination="d9h-Ld-koY" id="ZMb-XV-uGp"/>
+                        <outlet property="view3" destination="FPC-Bb-etz" id="smZ-oq-Qbl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bp5-hG-JFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1191.5" y="237.5"/>
+            <point key="canvasLocation" x="-1191.5" y="236.5"/>
         </scene>
     </scenes>
     <resources>
