@@ -128,14 +128,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        return 44
+        return 100
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("idHomeCell") as! UITableViewCell
         
-        cell.textLabel?.text = "Test、\(indexPath.row)"
+//        cell.textLabel?.text = "Test、\(indexPath.row)"
         
         return cell
     }
