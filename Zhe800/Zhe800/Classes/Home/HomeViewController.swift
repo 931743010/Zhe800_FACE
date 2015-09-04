@@ -8,11 +8,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIAlertViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet weak var btnViews: UIView!
     var timer : NSTimer?
     let imgCount = 5
     
@@ -20,10 +21,52 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         self.addRecyclePictureView()
+        
+        // BUG: 
+        // 1、为什么老是在第1页卡shi？--自动 ->done
+        // 2、滑动没有循环--手动滑时？滑动到最后一页时，应该自动加载第一页！！->todo
+        
+        self.addButtons()
     }
         
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    /// TODO: 2、“九宫格”方式动态加载btn，实现其功能（本应该：自定义xib+读取plist文件+建模型数据&封装方法进行赋值！）2 x 4 = 8个view，现在直接加了8个btn并实现其测试的点击事件
+    func addButtons() {
+        let btnW = self.btnViews.bounds.width / 4
+        let btnH = self.btnViews.bounds.height / 2
+        let columns = 4;
+        
+        for var i = 0; i < 8; i++ {
+            
+            // 计算当前的格子所在的列的索引
+            var col = CGFloat(i % columns);
+            // 计算每个格子所在的行的索引
+            var row = CGFloat(i / columns);
+            
+            var btn = UIButton()
+            
+            // appX = marginX + 当前app所在的列的索引 * (appW + marginX)
+            var btnX = col * btnW;
+            // appY = marginTop + row * (appH + marginY)
+            var btnY = row * btnH
+            
+            btn.frame = CGRectMake(btnX, btnY, btnW, btnH)
+//            btn.backgroundColor = UIColor.redColor()
+            btn.tag = i
+            btn.addTarget(self, action: "btnClick:", forControlEvents: UIControlEvents.TouchUpInside)
+            self.btnViews.addSubview(btn)
+        }
+    }
+    
+    func btnClick(sender: UIButton) {
+        println("the \(sender.tag)")
+        
+        var alt = UIAlertView(title: "测试数据", message: "点击了第【\(sender.tag+1)】个button！", delegate: self, cancelButtonTitle: "取消")
+        
+        alt.show()
     }
     
     /// TODO: 1、图片轮播器
